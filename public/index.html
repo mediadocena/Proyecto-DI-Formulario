@@ -23,21 +23,22 @@
    
     <div class="mx-auto" style="width: 200px;">
  <form>
-  <tr>
+  <div class="form-group">
   <label for="id">ID:</label>
    <input type="email" class="form-control" name="id" id="user_id" aria-describedby="emailHelp" placeholder="Enter email"/>
-  </tr>
-  <tr>
-   <td>Name: </td>
-   <td><input type="text" name="user_name" id="user_name" /></td>
-  </tr>
-  <tr>
-   <td colspan="2">
-    <input type="button" value="Save" onclick="save_user();"/>
-    <input type="button" value="Update" onclick="update_user();" />
-    <input type="button" value="Delete" onclick="delete_user();" />
-   </td>
-  </tr>
+   <small id="emailHelp" class="form-text text-muted">Inserte su ID</small>
+  </div>
+  <div class="form-group">
+   <label for="user">Nombre:</label>  
+   <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="user_name" id="user_name" />
+    </div>
+ 
+   
+    
+    <input type="button" value="Insertar/actulizar" onclick="update_user();" />
+    <input type="button" value="Borrar" onclick="delete_user();" />
+   
+  
  </form>
 </div>
 </div>
