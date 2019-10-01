@@ -1,9 +1,14 @@
 <html>
 <head>
  <title>Formulario</title>
+     <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+ <!--Scripts firebase y bootstrap-->
  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
  <script src=js/bootstrap.min.js></script>
  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+ <!--Iniciar firebase-->
  <script>
    // Initialize Firebase
    var config = {
@@ -18,11 +23,13 @@
    firebase.initializeApp(config);
  </script>
 </head>
+
 <style>
 body {
   background-color: rgb(182, 235, 236);
 }
 </style>
+
 <body>
   <div class="container mt-5">
    
@@ -99,9 +106,13 @@ body {
   }
   
   function update_user(){
+
+
    var user_name = document.getElementById('user_name').value;
    var user_id = document.getElementById('user_id').value;
-
+    if(user_name==""||user_id==""){
+      alert("Error, introduzca todos los campos");
+    }else{
    var data = {
     user_id: user_id,
     user_name: user_name
@@ -114,6 +125,7 @@ body {
    alert('El usuario ha sido insertado/modificado');
    
    reload_page();
+  }
   }
   
   function delete_user(){
