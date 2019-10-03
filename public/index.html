@@ -47,8 +47,8 @@ body {
    
     
     <button type="button" class="btn btn-success" onclick="update_user();" >Insertar/actualizar</button>
-    <button type="button" class="btn btn-danger"  onclick="delete_user();" >Borrar</button>
-   
+    <button type="button" class="btn btn-danger"  onclick="delete_user();" >Borrar id</button>
+    <button type="button" class="btn btn-danger"  onclick="delete_all();" >Borrar todo</button>
   
  </form>
 </div>
@@ -98,7 +98,7 @@ body {
    }
    
    var updates = {};
-   updates['/users/' + uid] = data;
+   updates['/cliente/' + uid] = data;
    firebase.database().ref().update(updates);
    
    alert('El usuario ha sido insertado/modificado');
@@ -130,7 +130,16 @@ body {
   
   function delete_user(){
    var user_id = document.getElementById('user_id').value;
-  
+  if(user_id==""){
+    alert("Error debe introducir una id");
+  }else{
+   firebase.database().ref().child('/users/' + user_id).remove();
+   alert('El usuario ha sido borrado');
+   reload_page();
+  }
+  }
+  function delete_all(){
+   var user_id = document.getElementById('user_id').value;
    firebase.database().ref().child('/users/' + user_id).remove();
    alert('El usuario ha sido borrado');
    reload_page();
