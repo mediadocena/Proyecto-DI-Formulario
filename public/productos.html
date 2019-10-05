@@ -25,7 +25,7 @@
                     <a class="nav-link" href="index2.html">Facturas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="clientes.html">Clientes</a>
+                    <a class="nav-link" href="index.html">Clientes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="productos.html">Productos</a>
@@ -33,51 +33,55 @@
             </ul>
         </div>
     </nav>
-
+    
     <br>
 
-    <h1>Clientes</h1>
+    <h1>Productos</h1>
 
     <br>
 
     <!-- Columnas -->
 
     <div class="container">
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="col-3">
+        <div class="col-3"></div>
+        <div class="col-6">
 
-                <!-- Fromulario -->
+            <!-- Fromulario -->
 
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">ID de cliente</label>
-                        <input type="text" class="form-control" id="user_id" placeholder="ID Cliente">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Nombre de cliente</label>
-                        <input type="text" class="form-control" id="user_name" placeholder="Nombre Cliente">
-                    </div>
-                    <button onclick="update_user()" type="submit" class="btn btn-primary">Crear cliente</button>
-                    <button onclick="delte_user()" type="submit" class="btn btn-danger">Borrar cliente</button>
-                </form>
-            </div>
-
-            <!-- Tabla clientes -->
-
-            <div class="col_3">
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">Clientes</th>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nombre</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
-            <!--<div class="col-3"></div>-->
+            <form>
+                <!--<div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>-->
+        
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Cliente</label>
+                    <select class="form-control" id="user_id">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Example multiple select</label>
+                    <select multiple class="form-control" id="exampleFormControlSelect2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </form>
         </div>
+        <div class="col-3"></div>
     </div>
 
     
