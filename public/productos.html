@@ -25,7 +25,7 @@
                     <a class="nav-link" href="index2.html">Facturas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="clientes.html">Clientes</a>
+                    <a class="nav-link" href="index.html">Clientes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="productos.html">Productos</a>
@@ -33,10 +33,10 @@
             </ul>
         </div>
     </nav>
-
+    
     <br>
 
-    <h1>Clientes</h1>
+    <h1>Productos</h1>
 
     <br>
 
@@ -51,15 +51,19 @@
 
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">ID de cliente</label>
-                        <input type="text" class="form-control" id="user_id" placeholder="ID Cliente">
+                        <label>ID de producto</label>
+                        <input type="text" class="form-control" id="product_id" placeholder="ID Producto">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Nombre de cliente</label>
-                        <input type="text" class="form-control" id="user_name" placeholder="Nombre Cliente">
+                        <label>Nombre de cliente</label>
+                        <input type="text" class="form-control" id="product_name" placeholder="Nombre Producto">
                     </div>
-                    <button onclick="update_user()" type="submit" class="btn btn-primary">Crear cliente</button>
-                    <button onclick="delete_user()" type="submit" class="btn btn-danger">Borrar cliente</button>
+                    <div class="form-group">
+                        <label>Precio de producto</label>
+                        <input type="text" class="form-control" id="product_value" placeholder="ID Producto">
+                    </div>
+                    <button onclick="update_product()" type="submit" class="btn btn-primary">Crear producto</button>
+                    <button onclick="delete_product()" type="submit" class="btn btn-danger">Borrar producto</button>
                 </form>
             </div>
 
@@ -69,9 +73,10 @@
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">Clientes</th>
+                            <th scope="col">Productos</th>
                             <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
+                            <th scope="col">Precio</th>
                         </tr>
                     </thead>
                 </table>

@@ -1,0 +1,73 @@
+<html>
+<head>
+ <title>Formulario</title>
+     <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+ <!--Scripts firebase y bootstrap-->
+ <script src="js/logica.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+ <script src=js/bootstrap.min.js></script>
+ <link rel="stylesheet" href="css/bootstrap.min.css"/>
+ <!--Iniciar firebase-->
+ <script>
+   // Initialize Firebase
+   var config = {
+  apiKey: "AIzaSyDcBKBYQ3Vx8J1t0XkJaYFxz6sMMX7J8r0",
+  authDomain: "proyecto-di-boostrap.firebaseapp.com",
+  databaseURL: "https://proyecto-di-boostrap.firebaseio.com",
+  projectId: "proyecto-di-boostrap",
+  storageBucket: "proyecto-di-boostrap.appspot.com",
+  messagingSenderId: "552251884631"
+   };
+
+   firebase.initializeApp(config);
+ </script>
+ 
+</head>
+
+<style>
+body {
+  background-color: rgb(182, 235, 236);
+}
+</style>
+
+<body>
+  <div class="container mt-5">
+   
+    <div class="mx-auto" style="width: 400px;">
+ <form>
+  <div class="form-group">
+  <label for="id">ID:</label>
+   <input type="text" class="form-control" name="id" id="user_id" aria-describedby="emailHelp" placeholder="Introduzca la id"/>
+  </div>
+  <div class="form-group">
+   <label for="user">Nombre:</label>  
+   <input type="text" class="form-control" aria-describedby="emailHelp" name="user_name" id="user_name"placeholder="Introduzca el nombre"/>
+    </div>
+ 
+   
+    
+    <button type="button" class="btn btn-success" onclick="update_user();" >Insertar/actualizar</button>
+    <button type="button" class="btn btn-danger"  onclick="delete_user();" >Borrar id</button>
+    <button type="button" class="btn btn-danger"  onclick="delete_all();" >Borrar todo</button>
+  
+ </form>
+</div>
+</div>
+<div class="container">
+  <div class="mx-auto" style="width: 400px;"  >
+ <h3>Users List</h3>
+ 
+ <table class="table table-dark" id="tbl_users_list" border="1">
+  <tr>
+   <td>#ID</td>
+   <td>NAME</td>
+  </tr>
+ </table>
+</div>
+
+</div>
+<script src="js/logica.js"></script>
+</body>
+</html>
