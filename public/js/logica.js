@@ -82,28 +82,6 @@
   function reload_page(){
    window.location.reload();
   }
-  //PRODUCTOS
-
-  function Insertar_productos(){
-    var product_name = document.getElementById('product_name').value;
-    var product_id = document.getElementById('product_id').value;
-    var product_value = document.getElementById('product_value').value;
-    if(product_name==""||product_id==""){
-      alert("Error, introduzca todos los campos");
-    }else{
-   var data = {
-    product_id: product_id,
-    product_name: product_name,
-    product_value: product_value
-   }
-   
-   var updates = {};
-   updates['/Productos/' + product_id] = data;
-   firebase.database().ref().update(updates);
-   
-   alert('El Producto ha sido insertado/modificado');
-   
-   reload_page();
-  }
-  }
+ 
+  
   

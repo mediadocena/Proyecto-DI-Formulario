@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Little CRUD</title>
+    <!--Firebase Script-->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+var config = {
+ apiKey: "AIzaSyDcBKBYQ3Vx8J1t0XkJaYFxz6sMMX7J8r0",
+ authDomain: "proyecto-di-boostrap.firebaseapp.com",
+ databaseURL: "https://proyecto-di-boostrap.firebaseio.com",
+ projectId: "proyecto-di-boostrap",
+ storageBucket: "proyecto-di-boostrap.appspot.com",
+ messagingSenderId: "552251884631"
+  };
+
+  firebase.initializeApp(config); 
+ </script>
   </head>
   <body>
 
@@ -64,25 +79,32 @@
                     </div>
                     <button onclick="update_product()" type="submit" class="btn btn-primary">Crear producto</button>
                     <button onclick="delete_product()" type="submit" class="btn btn-danger">Borrar producto</button>
+                     
                 </form>
             </div>
 
             <!-- Tabla clientes -->
 
             <div class="col_3">
-                <table class="table">
+                <table class="table" id="tbl_product_list">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">Productos</th>
                             <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Precio</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </thead>
                 </table>
             </div>
             <!--<div class="col-3"></div>-->
+            <script src="js/logicaproduct.js"></script>
         </div>
+        
     </div>
 
     
