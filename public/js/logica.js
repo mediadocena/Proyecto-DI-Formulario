@@ -44,8 +44,8 @@
 
 
    var user_name = document.getElementById('user_name').value;
-   var user_id = document.getElementById('user_id').value;
-    if(user_name==""||user_id==""){
+   var user_id = rowIndex
+    if(user_name==""){
       alert("Error, introduzca todos los campos");
     }else{
    var data = {

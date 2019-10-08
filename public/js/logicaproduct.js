@@ -24,9 +24,10 @@
 
   function update_product(){
     var product_name = document.getElementById('product_name').value;
-    var product_id = document.getElementById('product_id').value;
+    //var product_id = document.getElementById('product_id').value;
+    var product_id = rowIndex;
     var product_value = document.getElementById('product_value').value;
-    if(product_name==""||product_id==""){
+    if(product_name==""){
       alert("Error, introduzca todos los campos");
     }else{
    var data = {

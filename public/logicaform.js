@@ -1,9 +1,9 @@
  //FORMULARIO
     //TABLA 1:
    //Recuperamos la id del elemento html:
-   var tblUsers = document.getElementById('tbl_product_list');
+   var tblUsers = document.getElementById('user_id');
    //Hacemos referencia a la base de datos
-    var databaseRef = firebase.database().ref('/Productos/');
+    var databaseRef = firebase.database().ref('/Clientes/');
     var rowIndex = 1;
     //Esta parte se encarga de recuperar los datos de la base de datos e insertarlos en la tabla.
     databaseRef.once('value', function(snapshot) {
@@ -11,15 +11,9 @@
      var childKey = childSnapshot.key;
      var childData = childSnapshot.val();
      
-     var row = tblUsers.insertRow(rowIndex);
-     var cellId = row.insertCell(0);
-     var cellName = row.insertCell(1);
-     var cellValue = row.insertCell(2);
-     cellId.appendChild(document.createTextNode(childKey));
-     cellName.appendChild(document.createTextNode(childData.product_name));
-     cellValue.appendChild(document.createTextNode(childData.product_value));
-     
-     rowIndex = rowIndex + 1;
+     var row = tblUsers.insertAdjacentHTML('beforeend',"<option>"
+     + childData.user_name + " - " +childData.user_id
+     +"</option>")
       });
     });
 //FIN TABLA 1.
