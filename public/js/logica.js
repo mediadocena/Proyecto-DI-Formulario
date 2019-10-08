@@ -22,7 +22,7 @@
    rowIndex = rowIndex + 1;
     });
   });
-   
+   /*
   function save_user(){
    var user_name = document.getElementById('user_name').value;
   
@@ -39,7 +39,7 @@
     
    alert('El usuario ha sido insertado/modificado');
    reload_page();
-  }
+  }*/
   function update_user(){
 
 
@@ -52,7 +52,7 @@
     user_id: user_id,
     user_name: user_name
    }
-   
+   if(rowIndex-1<user_id){
    var updates = {};
    updates['/Clientes/' + user_id] = data;
    firebase.database().ref().update(updates);
@@ -60,6 +60,9 @@
    alert('El usuario ha sido insertado/modificado');
    
    reload_page();
+   }else{
+     alert("La id ya existe"+user_id);
+   }
   }
   }
   

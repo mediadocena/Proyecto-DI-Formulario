@@ -1,4 +1,5 @@
- //PRODUCTOS
+ //FORMULARIO
+    //TABLA 1:
    //Recuperamos la id del elemento html:
    var tblUsers = document.getElementById('tbl_product_list');
    //Hacemos referencia a la base de datos
@@ -21,6 +22,7 @@
      rowIndex = rowIndex + 1;
       });
     });
+//FIN TABLA 1.
 
   function update_product(){
     var product_name = document.getElementById('product_name').value;
@@ -36,16 +38,12 @@
    }
    
    var updates = {};
-   if(rowIndex-1 < product_id){
    updates['/Productos/' + product_id] = data;
    firebase.database().ref().update(updates);
    
    alert('El Producto ha sido insertado/modificado');
    
    reload_page();
-   }else{
-     alert("La id ya existe:"+product_id);
-   }
   }
  
 }
