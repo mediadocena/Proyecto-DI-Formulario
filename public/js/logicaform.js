@@ -35,7 +35,7 @@ var tblProduct = document.getElementById('product_id');
  });
   function añadirPrecio(){
     var product = document.getElementById(product_id);
-    
+    console.log("hola");
   }
   function update_product(){
     var product_name = document.getElementById('product_name').value;
