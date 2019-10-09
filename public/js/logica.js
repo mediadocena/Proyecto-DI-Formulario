@@ -16,8 +16,12 @@
    var row = tblUsers.insertRow(rowIndex);
    var cellId = row.insertCell(0);
    var cellName = row.insertCell(1);
+   var cellNumber = row.insertCell(2);
+   var cellDni = row.insertCell(3);
    cellId.appendChild(document.createTextNode(childKey));
    cellName.appendChild(document.createTextNode(childData.user_name));
+   cellNumber.appendChild(document.createTextNode(childData.user_number));
+   cellDni.appendChild(document.createTextNode(childData.user_dni));
    
    rowIndex = rowIndex + 1;
     });
@@ -46,13 +50,15 @@
    var user_name = document.getElementById('user_name').value;
    var user_id = document.getElementById('user_id').value;
    var user_number = document.getElementById('user_number').value;
+   var user_dni = document.getElementById('user_dni').value;
     if(user_name==""){
       alert("Error, introduzca todos los campos");
     }else{
    var data = {
     user_id: user_id,
     user_name: user_name,
-    user_number: user_number
+    user_number: user_number,
+    user_dni:user_dni
    }
    if(user_id > rowIndex-1){
    var updates = {};
