@@ -30,20 +30,21 @@
     <!-- Navbar -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Navbar</a>
+    <h2 class="text-light">CRUD</h2>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index2.html">Facturas</a>
+                    <a class="nav-link" href="index2.html" tabindex="1">Facturas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Clientes</a>
+                    <a class="nav-link" href="index.html" tabindex="2">Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="productos.html">Productos</a>
+                    <a class="nav-link" href="productos.html" tabindex="3">Productos</a>
                 </li>
             </ul>
         </div>
@@ -64,35 +65,95 @@
             <!-- Fromulario -->
 
             <form>
-                <!--<div class="form-group">
-                    <label for="exampleFormControlInput1">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>-->
-        
+                <div class="form-group">
+                    <label for="exampleInputEmail1">ID de factura</label>
+                    <input type="text" class="form-control" id="user_id" placeholder="ID Factura">
+                </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Cliente</label>
                     <select class="form-control" id="user_id">
                     <option></option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect2">Example multiple select</label>
-                    <select multiple class="form-control" id="exampleFormControlSelect2">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    </select>
+                <div class="form-group p-3 mb-2 bg-dark text-white rounded-lg">
+                        <label for="exampleFormControlSelect1">Producto</label>
+                        <select class="form-control" id="user_id">
+                        <option></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        </select>
+                        <div>
+                            <label>Cantidad</label>
+                            <input type="number" class="form-control" id="" placeholder="Cantidad">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Precio</label>
+                            <input type="number" class="form-control" id="" placeholder="Precio producto">
+                        </div>
+                        <table class="table" id="tbl_users_list">
+                            <thead class="thead-dark">
+                                <tr>
+                                  <th scope="col" onclick="">ID</th>
+                                  <th scope="col">Nombre</th>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                            </thead>
+                        </table>
+                        <button onclick="anadir_producto()" type="submit" class="btn btn-primary">Añadir producto</button>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="exampleInputEmail1">IVA</label>
+                    <input type="text" class="form-control" id="user_id" placeholder="IVA">
                 </div>
+
+                <button onclick="crear_factura()" type="submit" class="btn btn-danger">Crear factura</button>
             </form>
         </div>
+
         <div class="col-3"></div>
         <script src="logicaform.js"></script>
+
+        <div class="col-3">
+            <table class="table" id="tbl_users_list">
+                <thead class="thead-dark">
+                    <tr>
+                        
+                        <th scope="col">ID</th>
+                        <th scope="col">cliente</th>
+                        <th scope="col">Productos</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col">IVA</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                    <tr>
+                        
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <!--Tabla productos en factura-->
+        <div class="col-3">
+            <table class="table" id="tbl_users_list">
+              <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                  </tr>
+              </thead>
+          </table>
+          </div>
     </div>
 
    
