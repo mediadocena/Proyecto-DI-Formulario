@@ -1,10 +1,10 @@
  //FORMULARIO
-    //TABLA 1:
+    //LISTADO CLIENTES:
    //Recuperamos la id del elemento html:
    var tblUsers = document.getElementById('user_id');
    //Hacemos referencia a la base de datos
     var databaseRef = firebase.database().ref('/Clientes/');
-    var rowIndex = 1;
+
     //Esta parte se encarga de recuperar los datos de la base de datos e insertarlos en la tabla.
     databaseRef.once('value', function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
@@ -16,8 +16,27 @@
      +"</option>")
       });
     });
-//FIN TABLA 1
+//FIN LISTA CLIENTES
+//LISTA PRODUCTOS
+var tblProduct = document.getElementById('product_id');
+//Hacemos referencia a la base de datos
+ var databaseRefProd = firebase.database().ref('/Productos/');
 
+ //Esta parte se encarga de recuperar los datos de la base de datos e insertarlos en la tabla.
+ databaseRefProd.once('value', function(snapshot) {
+   snapshot.forEach(function(childSnapshot) {
+  var childKey = childSnapshot.key;
+  var childData = childSnapshot.val();
+  
+  var row = tblProduct.insertAdjacentHTML('beforeend',"<option>"
+  + childData.product_name + " - " +childData.product_id
+  +"</option>")
+   });
+ });
+  function añadirPrecio(){
+    var product = document.getElementById(product_id);
+    
+  }
   function update_product(){
     var product_name = document.getElementById('product_name').value;
     var product_id = document.getElementById('product_id').value;
