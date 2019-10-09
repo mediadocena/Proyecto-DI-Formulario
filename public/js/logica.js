@@ -54,7 +54,8 @@
     user_name: user_name,
     user_number: user_number
    }
-   if(user_id > rowIndex-1){
+   if(user_id >
+   rowIndex-1){
    var updates = {};
    updates['/Clientes/' + user_id] = data;
    firebase.database().ref().update(updates);
