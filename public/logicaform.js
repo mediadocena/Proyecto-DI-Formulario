@@ -16,7 +16,7 @@
      +"</option>")
       });
     });
-//FIN TABLA 1.
+//FIN TABLA 1
 
   function update_product(){
     var product_name = document.getElementById('product_name').value;
