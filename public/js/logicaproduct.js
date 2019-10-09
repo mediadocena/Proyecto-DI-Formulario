@@ -24,8 +24,7 @@
 
   function update_product(){
     var product_name = document.getElementById('product_name').value;
-    //var product_id = document.getElementById('product_id').value;
-    var product_id = rowIndex;
+    var product_id = document.getElementById('product_id').value;
     var product_value = document.getElementById('product_value').value;
     if(product_name==""){
       alert("Error, introduzca todos los campos");
@@ -35,9 +34,8 @@
     product_name: product_name,
     product_value: product_value
    }
-   
    var updates = {};
-   if(rowIndex-1 < product_id){
+   if(rowIndex < product_id){
    updates['/Productos/' + product_id] = data;
    firebase.database().ref().update(updates);
    

@@ -7,13 +7,12 @@
  //Hacemos referencia a la base de datos
   var databaseRef = firebase.database().ref('/Clientes/');
   var rowIndex = 1;
-  var id;
   //Esta parte se encarga de recuperar los datos de la base de datos e insertarlos en la tabla.
   databaseRef.once('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
    var childKey = childSnapshot.key;
    var childData = childSnapshot.val();
-   id =snapshot.child("/Clientes/").numChildren();
+ 
    var row = tblUsers.insertRow(rowIndex);
    var cellId = row.insertCell(0);
    var cellName = row.insertCell(1);
@@ -45,15 +44,17 @@
 
 
    var user_name = document.getElementById('user_name').value;
-   var user_id = id;
+   var user_id = document.getElementById('user_id').value;
+   var user_number = document.getElementById('user_number').value;
     if(user_name==""){
       alert("Error, introduzca todos los campos");
     }else{
    var data = {
     user_id: user_id,
-    user_name: user_name
+    user_name: user_name,
+    user_number: user_number
    }
-   if(rowIndex-1<user_id){
+   if(user_id > rowIndex-1){
    var updates = {};
    updates['/Clientes/' + user_id] = data;
    firebase.database().ref().update(updates);
