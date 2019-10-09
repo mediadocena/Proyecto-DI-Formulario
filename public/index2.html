@@ -30,7 +30,6 @@
     <!-- Navbar -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Navbar</a>
     <h2 class="text-light">CRUD</h2>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -60,10 +59,10 @@
 
     <div class="container">
         <div class="col-3"></div>
-        <div class="col-6">
+        <div class="row">
+                <div class="col-6">
 
             <!-- Fromulario -->
-
             <form>
                 <div class="form-group">
                     <label for="exampleInputEmail1">ID de factura</label>
@@ -92,12 +91,12 @@
                         <table class="table" id="tbl_users_list">
                             <thead class="thead-dark">
                                 <tr>
-                                  <th scope="col" onclick="">ID</th>
-                                  <th scope="col">Nombre</th>
+                                    <th scope="col" onclick="">ID</th>
+                                    <th scope="col">Nombre</th>
                                 </tr>
                                 <tr>
-                                  <td></td>
-                                  <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                             </thead>
                         </table>
@@ -111,8 +110,6 @@
                 <button onclick="crear_factura()" type="submit" class="btn btn-danger">Crear factura</button>
             </form>
         </div>
-
-        <div class="col-3"></div>
         
 
         <div class="col-3">
@@ -134,23 +131,23 @@
                     </tr>
                 </thead>
             </table>
-        </div>
-        <!--Tabla productos en factura-->
-        <div class="col-3">
             <table class="table" id="tbl_users_list">
-              <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nombre</th>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                  </tr>
-              </thead>
-          </table>
-          </div>
-          <script src="js/logicaform.js"></script>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" onclick="">ID</th>
+                            <th scope="col">Nombre</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                </table>
+        </div>
+        
+            </div>
+        </div>
+        <script src="js/logicaform.js"></script>
     </div>
 
    
