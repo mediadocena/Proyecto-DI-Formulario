@@ -73,7 +73,12 @@
    }
   }
   }
-  
+  function imprimir(){
+    var pdf = new jsPDF('p', 'mm', 'letter');
+    pdf.text(20, 10, "Clientes:");
+    pdf.autoTable({html:'#tbl_users_list'})
+    pdf.save("miPDF.pdf");
+  }
   
   function delete_user(){
    var user_id = document.getElementById('user_id').value;
