@@ -73,6 +73,9 @@
    }
   }
   }
+
+  //https://github.com/simonbengtsson/jsPDF-AutoTable
+  //https://parall.ax/products/jspdf
   function imprimir(){
     var pdf = new jsPDF('p', 'mm', 'letter');
     pdf.text(20, 10, "Clientes:");
