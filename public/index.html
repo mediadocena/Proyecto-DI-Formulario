@@ -11,7 +11,7 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
+    <!--<link href="css/mdb.min.css" rel="stylesheet">-->
     <!--Firebase Script-->
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <title>Little CRUD</title>
@@ -67,7 +67,7 @@
             <div class="col-6 bg-dark text-white rounded-lg" >
 
                 <!-- Fromulario -->
-
+                <br>
                 <form>
                     <div class="form-group">
                         <label for="exampleInputEmail1">ID de cliente</label>
@@ -85,15 +85,19 @@
                     <label for="exampleInputEmail1">DNI</label>
                     <input type="text" class="form-control" id="user_dni" placeholder="DNI">
                 </div>
-                    <button onclick="update_user()" type="submit" class="btn btn-primary">Crear cliente</button>
+                    <div align="center">
+                        <button onclick="update_user()" type="submit" class="btn btn-primary">Crear cliente</button>
                     <button onclick="delete_user()" type="submit" class="btn btn-danger">Borrar cliente</button>
                     <button onclick="imprimir()" type="submit" class="btn btn-primary">Exportar a PDF</button>
+                    </div>
                 </form>
+                <br>
             </div>
 
             <!-- Tabla clientes -->
 
             <div class="col_3 col-sm">
+                <br>
                 <table class="table" id="tbl_users_list">
                     <thead class="thead-dark">
                         <tr>
@@ -128,7 +132,7 @@
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!--<script type="text/javascript" src="js/mdb.min.js"></script>-->
     <!--JSPDF-->
     <script src="js/jspdf.min.js"></script>
     <script src="js/jspdf.plugin.autotable.js"></script>
