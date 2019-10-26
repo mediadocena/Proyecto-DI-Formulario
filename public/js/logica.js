@@ -76,7 +76,7 @@
   function imprimir(){
     var pdf = new jsPDF('p', 'mm', 'letter');
     pdf.text(20, 10, "Clientes:");
-    pdf.autoTable({html:'#tbl_users_list',fillcolor:0,useCss: true})
+    pdf.autoTable({html:'#tbl_users_list',useCss: true, theme: 'plain'});
     pdf.save("miPDF.pdf");
   }
   
